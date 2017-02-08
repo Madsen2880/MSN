@@ -69,7 +69,7 @@ if($_GET){
         #validerEmail
         if ( isset($_POST['email']) ) { // test om variablen eksisterer
             if ( empty($_POST['email']) ) { // test om variablen er tom
-                $fejlemail = 'Du skal udfylde feltet, klaphat';
+                $fejlemail = 'Du skal udfylde feltet';
                 ++$fejl;
             } else if ( !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) { // test om varibel er en email
                 $fejlemail = "Emailen er ikke skrevet korrekt.";
@@ -82,10 +82,10 @@ if($_GET){
         #validerNavn
         if (isset($_POST['firstname'])){ // test om variablen eksisterer
             if (empty($_POST['firstname'])){ // test om variablen er tom
-                $fejlproduktnavn = 'Du skal udfylde feltet, klaphat';
+                $fejlproduktnavn = 'Du skal udfylde feltet';
                 ++$fejl;
             }else if (preg_match('/\d/', $_POST['firstname']) ) { // test om varibel indeholder tal
-                $fejlproduktnavn = "DOH! Du ka' sgu' da ikke hedde noget med tal i. Spade.";
+                $fejlproduktnavn = "Feltet må ikke indeholde tal.";
                 ++$fejl;
             } else {//success
                 $produktnavn = $_POST['firstname'];
@@ -95,10 +95,10 @@ if($_GET){
         #validerEfternavn
         if (isset($_POST['surname'])){ // test om variablen eksisterer
             if (empty($_POST['surname'])){ // test om variablen er tom
-                $fejlproduktnavn = 'Du skal udfylde feltet, klaphat';
+                $fejlproduktnavn = 'Du skal udfylde feltet';
                 ++$fejl;
             }else if (preg_match('/\d/', $_POST['surname']) ) { // test om varibel indeholder tal
-                $fejlproduktnavn = "DOH! Du ka' sgu' da ikke hedde noget med tal i. Spade.";
+                $fejlproduktnavn = "Feltet må ikke indeholde tal.";
                 ++$fejl;
             } else {//success
                 $produktnavn = $_POST['surname'];
