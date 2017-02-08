@@ -146,10 +146,10 @@ if($_GET){
         #validerProfilText
         if (isset($_POST['profileText'])){ //test om variablen eksistere
             if (empty($_POST['profileText'])){ // test om variablen er tom
-                $fejlproduktinfo = 'Du skal udfylde feltet, klaphat';
+                $fejlproduktinfo = 'Du skal udfylde feltet';
                 ++$fejl;
             }elseif (strlen($_POST['profileText']) <= 40){ //tjekker længden på strengen
-                $fejlproduktinfo = 'Du skal bruge mere en 15 tegn';
+                $fejlproduktinfo = 'Du skal bruge mere en 40 tegn';
                 ++$fejl;
             }else { // success
                 $produktinfo = $_POST['profileText'];
