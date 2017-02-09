@@ -18,6 +18,9 @@
 
 <?php
 //load database connection
+include ('lib/class.mysql.php');
+$conn = new dbconnector();
+
 $host = "localhost";
 $user = "root";
 $password = "";
